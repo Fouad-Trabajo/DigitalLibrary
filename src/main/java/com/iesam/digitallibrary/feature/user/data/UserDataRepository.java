@@ -15,6 +15,6 @@ public class UserDataRepository implements UserRepository {
 
     @Override
     public void createUser(User user) {
-
+        userFileLocalDataSource.save(user);
     }
 }
