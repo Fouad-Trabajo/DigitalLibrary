@@ -12,6 +12,9 @@ public class UserDataRepository implements UserRepository {
 
     private UserFileLocalDataSource userFileLocalDataSource;
 
+    public UserDataRepository() {
+
+    }
 
     @Override
     public void createUser(User user) {
