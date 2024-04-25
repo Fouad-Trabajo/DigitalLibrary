@@ -5,7 +5,8 @@ import com.iesam.digitallibrary.feature.user.domain.User;
 import com.iesam.digitallibrary.feature.user.domain.UserRepository;
 
 /**
- * Esta es la clase que me permite gestionar el acceso a fuentes de datos*/
+ * Esta es la clase que me permite gestionar el acceso a fuentes de datos
+ * */
 public class UserDataRepository implements UserRepository {
 
     private UserFileLocalDataSource userFileLocalDataSource;
@@ -17,5 +18,10 @@ public class UserDataRepository implements UserRepository {
     @Override
     public void createUser(User user) {
         userFileLocalDataSource.save(user);
+    }
+
+    @Override
+    public void deleteUser(String id) {
+        userFileLocalDataSource.delete(id);
     }
 }

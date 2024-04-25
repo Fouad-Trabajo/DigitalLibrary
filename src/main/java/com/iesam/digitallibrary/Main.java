@@ -1,5 +1,6 @@
 package com.iesam.digitallibrary;
 
+import com.iesam.digitallibrary.feature.user.domain.User;
 import com.iesam.digitallibrary.feature.user.presentation.UserPresentation;
 
 import java.util.Scanner;
@@ -16,7 +17,7 @@ public class Main {
             do {
                 System.out.println("********** MENÚ **********");
                 System.out.println("1. Crear usuario");
-                System.out.println("2. Opción n");
+                System.out.println("2. Borrar usuario");
                 System.out.println("3. Salir");
                 System.out.println("**************************");
                 System.out.print("Elige una opción: ");
@@ -29,7 +30,8 @@ public class Main {
                         UserPresentation.showNewUser();
                         break;
                     case 2:
-                        System.out.println("Has seleccionado la opción n.");
+                        System.out.println("Has seleccionado borrar un usuario");
+                        UserPresentation.delelteUser();
                         break;
                     case 3:
                         System.out.println("Has seleccionado salir. ¡Hasta luego!");
